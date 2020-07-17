@@ -12,14 +12,19 @@ import javax.persistence.Table;
 @Table(name = "user_details")
 @NamedQuery(name = "User.finduserbyjobtype", query = " select name from User where jobtype = ?1")
 public class User {
+	
 	@Id()
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	@Column(name = "id")
 	int userid;
+	
 	@Column(name = "name")
 	String name;
+	
 	@Column(name = "age")
 	int age;
+	
 	@Column(name = "jobtype")
 	String jobtype;
 
